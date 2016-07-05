@@ -42,7 +42,7 @@ class GridImageField extends \Ip\Internal\Grid\Model\Field {
         if ('' != $record_data[$this->field]) {
             $image_src = ipFileUrl($this->destinationPath . $record_data[$this->field]);
 
-            return "<img style='max-height: 70px;' src='$image_src' alt='".$record_data[$this->field]."' />";
+            return '<img style="max-height: 70px;" src="'.$image_src.'" alt="'.$record_data[$this->field].'" />';
         }
 
         return '---';
