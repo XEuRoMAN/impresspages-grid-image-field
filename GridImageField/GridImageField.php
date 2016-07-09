@@ -96,8 +96,8 @@ class GridImageField extends \Ip\Internal\Grid\Model\Field {
     }
 
     public function updateData($post_data) {
-        if (isset($post_data[$this->field . '_not_updated'])) {
-            return array($this->field => $post_data[$this->field . '_not_updated']);
+        if (!empty(ipRequest()->getPost($this->field . '_not_updated'))) {
+            return array($this->field => ipRequest()->getPost($this->field . '_not_updated'));
         } else if (isset($post_data[$this->field])) {
             $file_name = $post_data[$this->field][0];
             $source_path = ipFile('file/repository/' . $file_name);
