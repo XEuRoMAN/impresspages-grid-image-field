@@ -15,6 +15,7 @@
         <?php if ($value) { ?>
             <div class="_file ipsFile">
                 <button type="button" class="close ipsRemove">&times;</button>
+                <input type="hidden" name="<?php echo escAttr($inputName); ?>_not_updated" value="<?php echo escAttr($value); ?>"/>
                 <input type="hidden" name="<?php echo escAttr($inputName); ?>[]" value="<?php echo escAttr($value); ?>"/>
                 <img style="max-height: 70px;" src="<?php echo ipFileUrl($destinationPath . $value); ?>"
                      alt="Photo <?php echo $value; ?>"/>

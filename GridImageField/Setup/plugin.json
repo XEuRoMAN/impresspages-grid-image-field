@@ -1,6 +1,6 @@
 {
     "title": "Grid Image Field",
-    "version": "1.02",
+    "version": "1.03",
     "name": "GridImageField",
     "description": "Similarly as RepositoryFile but it allows only images which can be cropped to defined dimensions.",
     "author": "Justas Šepronas <justas.sepronas@gmail.com>"
